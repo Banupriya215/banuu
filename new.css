@@ -1,0 +1,46 @@
+/* flex basis tells the individual size of an element before its placed 
+in container */
+#container {
+    width: 90%;
+    /* height: 500px; */
+    /* height: 1500px; */
+    background-color: rgb(136, 136, 160);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    /* flex-direction: column; */
+    justify-content: center;
+    /* flex-wrap: wrap; */
+}
+
+div {
+    width: 200px;
+    height: 200px;
+    /* flex-basis: 400px; */
+    flex-basis: 100px;
+    flex-grow: 1;
+    /* max-width: 250px; */
+}
+
+div:nth-of-type(1) {
+
+
+    flex-grow: 1;
+    flex-shrink: 2;
+}
+
+
+div:nth-of-type(5) {
+    flex-grow: 2;
+    flex-shrink: 0;
+}
+
+/* flex basis is towards main axis ,it can be height if flex direction
+is col or width if flex direction is row */
+/* when u give flex grow to all,all grow equally and r of same size even 
+when i change the window size,here first div will take one part
+of available space ,whereas second div takes twice the place of first div
+available space is taken by flex grow and is filled accordingly,
+when there is less space than wanted flex auto distributes space equally
+even if flex grow is 1 for all,when wraped last div can take all 
+available space instead of all divs having same space */
